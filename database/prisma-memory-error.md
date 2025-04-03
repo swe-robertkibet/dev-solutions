@@ -1,5 +1,6 @@
 # Deploying Prisma on Resource-Constrained Environments
 
+
 ## What Causes the "Out of Memory" Error
 
 When deploying Node.js applications with Prisma on shared hosting or resource-constrained environments (like cPanel), you may encounter this error:
@@ -7,6 +8,14 @@ When deploying Node.js applications with Prisma on shared hosting or resource-co
 ```
 RangeError: WebAssembly.Instance(): Out of memory: Cannot allocate Wasm memory for new instance
 ```
+![image_2025-04-03_03-15-00](https://github.com/user-attachments/assets/439dd8cb-aa36-4d0c-9ca1-e9e8192056e1)
+
+![image_2025-04-03_03-15-22](https://github.com/user-attachments/assets/0a09f5dc-8db6-4c75-98b1-6adc656018b2)
+
+![image_2025-04-03_03-16-00](https://github.com/user-attachments/assets/b47044c5-4e16-4d75-b458-c062160ac117)
+
+![image_2025-04-03_03-16-28](https://github.com/user-attachments/assets/0141bfc1-7b4d-4f59-a278-286cd32f62ab)
+
 
 This happens because Prisma uses WebAssembly (Wasm) modules during client generation that require more memory than many shared hosting environments allow. Prisma's client generation process is particularly memory-intensive, as it needs to parse your schema and generate type-safe database access code.
 
@@ -25,6 +34,7 @@ npx prisma generate
 ```
 
 This will generate the Prisma client in `./node_modules/@prisma/client`
+![image_2025-04-03_03-26-08](https://github.com/user-attachments/assets/541d5a92-a450-4d14-8bb0-5ed7efac7f56)
 
 ### 2. Compile Your TypeScript Project
 
@@ -78,12 +88,14 @@ In cPanel's Node.js App Manager:
 ```bash
 npm install
 ```
+![image_2025-04-03_03-14-44](https://github.com/user-attachments/assets/3d6077c8-008f-481a-9eb1-2c32df5beea1)
 
 This will regenerate node_modules directory but might fail when trying to generate the Prisma client.
 
 ### 8. Stop Your Application
 
 Stop your application in the Node.js App Manager or via command line.
+![image](https://github.com/user-attachments/assets/f9abd3e8-8959-4aa5-ab48-b95fcd9a0800)
 
 ### 9. Deploy Pre-Generated Prisma Client
 
@@ -101,6 +113,7 @@ If a `.prisma` directory was created during npm install, remove it:
 ```bash
 rm -rf .prisma
 ```
+![image_2025-04-03_03-18-02](https://github.com/user-attachments/assets/232748ab-9342-40a8-b0a5-8021185c6ec9)
 
 ### 11. Extract Your Pre-Generated Prisma Files
 
