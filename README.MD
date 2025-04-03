@@ -22,7 +22,7 @@ Each solution document follows a consistent format:
 
 ### Database
 
-- [Prisma Out of Memory Error on cPanel](./database/prisma-memory-error.md) - How to deploy Prisma apps on resource-constrained environments
+- [Prisma Out of Memory Error on cPanel](./database/prisma-memory-error) - How to deploy Prisma apps on resource-constrained environments
 
 ### Deployment
 
@@ -38,7 +38,7 @@ _(Coming soon)_
 
 ### General Knowledge
 
-- [Why Compile TypeScript to JavaScript for Deployment](./general-knowledge/typescript-compilation.md) - Understanding the necessity of the TypeScript compilation step
+- [Why Compile TypeScript to JavaScript for Deployment](./general-knowledge/typescript-compilation) - Understanding the necessity of the TypeScript compilation step
 
 ## 🤝 Contributing
 
