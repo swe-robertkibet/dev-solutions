@@ -36,6 +36,10 @@ _(Coming soon)_
 
 _(Coming soon)_
 
+### General Knowledge
+
+- [Why Compile TypeScript to JavaScript for Deployment](./general-knowledge/typescript-compilation.md) - Understanding the necessity of the TypeScript compilation step
+
 ## 🤝 Contributing
 
 While this is primarily my personal collection of solutions, I welcome contributions:
